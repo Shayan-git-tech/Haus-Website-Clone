@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Urbanist:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, html{
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "Urbanist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer utilities {
+  ::selection {
+    background-color: #ffe6c1; /* Match your design */
+    color: #000000; /* Optional for better contrast */
+  }
+
+  /* For Firefox */
+  ::-moz-selection {
+    background-color: #ffe6c1;
+    color: #000000;
+  }
+}
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+/* Styling */
+.slider {
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+
+.smooth-wrapper {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.smooth-content {
+  width: 100%;
+}
+
+.grain-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  bottom: -75%;
+  right: -75%;
+  z-index: 0;
+  
+}
+
+.shadow-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.shadow-purple-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: -100px;
+  right: -100px;
+  border-radius: 50%;
+  background: rgba(160, 117, 201, 0.2);
+  box-shadow: 0 0 120px 120px rgba(160, 117, 201, 0.2);
+}
+@media (max-width: 768px) {
+  .grain-bg {
+    width: 160%;
+    height: 160%;
+    bottom: -60%;
+    right: -60%;
+  }
+  
+  .shadow-purple-circle {
+    width: 290px;
+    height: 145px;
+    bottom: -75px;
+    right: -75px;
+    box-shadow: 0 0 80px 80px rgba(160, 117, 201, 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .grain-bg {
+    width: 100%;
+    height: 100%;
+    bottom: -50%;
+    right: -50%;
+  }
+  
+  .shadow-purple-circle {
+    width: 120px;
+    height: 120px;
+    bottom: -60px;
+    right: -60px;
+    box-shadow: 0 0 60px 60px rgba(160, 117, 201, 0.2);
+  }
+}
+
+.smooth{
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.smooth:hover{
+  transform: translateY(-20px);
+}
