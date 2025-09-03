@@ -11,7 +11,7 @@ function About() {
       enableBlur={true}
       baseRotation={5}
       blurStrength={5}
-      containerClassName="min-h-screen max-w-5xl mx-auto my-20 px-4 py-7"
+      containerClassName="max-w-5xl mx-auto my-12 md:my-16 lg:my-20 xl:my-24 px-4 py-12 md:py-16 lg:py-20"
     >
       {`We're Marc and Jacob from Haus—a design partnership combining 35+ years of
 experience building successful products and elevating brands for

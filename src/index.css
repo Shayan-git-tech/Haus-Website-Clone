@@ -4,13 +4,23 @@
 @tailwind utilities;
 
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body, html{
   background-color: #000000;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  box-sizing: border-box;
   font-family: "Urbanist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
 }
 
 @layer utilities {
@@ -35,13 +45,25 @@ body, html{
   }
 }
 
+@media (max-width: 768px) {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-180px * 7));
+    }
+  }
+}
+
 /* Styling */
 .slider {
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
   margin: auto;
   position: relative;
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
 }
 
 
@@ -63,12 +85,18 @@ body, html{
   width: calc(250px * 14);
 }
 
+@media (max-width: 768px) {
+  .slider .slide-track {
+    width: calc(180px * 14);
+  }
+}
+
 
 .smooth-wrapper {
   overflow: hidden;
   position: fixed;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   top: 0;
   left: 0;
   right: 0;
@@ -77,6 +105,7 @@ body, html{
 
 .smooth-content {
   width: 100%;
+  min-width: 100vw;
 }
 
 .grain-bg {
@@ -110,8 +139,8 @@ body, html{
 }
 @media (max-width: 768px) {
   .grain-bg {
-    width: 160%;
-    height: 160%;
+    width: 100%;
+    height: 100%;
     bottom: -60%;
     right: -60%;
   }

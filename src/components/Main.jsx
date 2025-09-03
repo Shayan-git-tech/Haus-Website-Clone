@@ -5,17 +5,19 @@ import Clients from './Clients';
 import About from './About';
 import Method from './Method';
 import Growth from './Growth';
+import Footer from './Footer';
 
 function Main() {
   
   return (
-    <main className='container overflow-hidden'>
+    <main className='overflow-hidden w-full'>
     <Header />   
     <Hero />
     <Clients />
     <About />
     <Method />
     <Growth />
+    <Footer />
     </main>
   )
 }

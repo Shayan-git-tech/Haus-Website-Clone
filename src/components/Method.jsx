@@ -45,7 +45,7 @@ function Method() {
     },
   ];
   return (
-    <section className="container flex flex-col items-center justify-center min-h-screen relative bg-[#0a0a0a] overflow-hidden py-12 md:py-10 sm:py-6">
+    <section className="w-full flex flex-col items-center justify-center relative bg-[#0a0a0a] overflow-hidden py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 py-10">
         {/* Grain background that only shows behind the text */}
         <div className="absolute top-[10%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">

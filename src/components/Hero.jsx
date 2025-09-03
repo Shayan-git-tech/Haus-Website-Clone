@@ -2,7 +2,7 @@ import React from 'react'
 
 function Hero() {
 return (
-    <div className='min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] lg:min-h-screen w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 flex flex-col justify-center items-center text-center relative'>
+    <div className='py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-16 flex flex-col justify-center items-center text-center relative'>
        
         <p className="text-p2 sm:text-p2-sm md:text-p2-md font-merriweather italic text-accent mb-4 sm:mb-6 md:mb-8">
         On-Demand Design & Dev • Senior Level Designers • One Simple Subscription

@@ -27,7 +27,7 @@ function Clients() {
   ];
 
   return (
-    <div className="w-full my-20">
+    <div className="w-full my-12 md:my-16 lg:my-20 xl:my-24">
       {/* Text with grainy background */}
       <div className="relative w-full mb-12 flex justify-center">
         <div className="relative z-10 px-4">
@@ -45,7 +45,7 @@ function Clients() {
         </div>
       </div>
 
-      <div className="relative max-w-5xl mx-auto overflow-hidden">
+      <div className="relative w-full max-w-5xl mx-auto overflow-hidden px-4 sm:px-6 md:px-8">
         {/* Left shadow/gradient */}
         <div className="absolute left-0 top-0 h-full w-24 z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"></div>
 
